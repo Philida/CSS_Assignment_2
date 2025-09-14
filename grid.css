@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Top and bottom Section, Grid Layout */
+.top-section,
+.bottom-section {
+  display: grid;
+  border-radius: 5px;
+  padding: 15px 10px;
+}
+
+/* Top Section: Flex Layout */
+.top-section {
+  grid-template-columns: repeat(2, 1fr);
+  padding: 20px;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: space-around;
+  column-gap: 50px;
+  background-color: #a7d4f5;
+}
+
+.bottom-section {
+ grid-template-columns: repeat(2, 1fr);
+column-gap: 20px;
+
+}
+
+.profile-image {
+    display: grid;
+  place-items: center;
+  overflow: hidden;
+  
+}
+
+.intro {
+    align-items: start;
+ 
+}
+
+.profile-image img {
+   width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  padding: 20px;
+  color: #6b006b;
+}
+
+.intro h2 {
+  margin-bottom: 10px;
+}
+
+.box {
+ 
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px solid #c23bcb;
+  text-align: center;
+  background-color: #a7d4f5;
+}
+
+/* Responsive: Stack on small screens */
+@media screen and (max-width: 600px) {
+  .top-section,
+  .bottom-section {
+    padding: 15px 10px;
+    row-gap: 20px;
+    text-align: center;
+  }
+  /* Top Section: Flex Layout */
+  .top-section {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    border-radius: 12px;
+    place-items: center;
+  }
+
+  .bottom-section {
+    grid-template-columns: 1fr;
+    
+  }
+  .profile-image {
+    margin-left: 0;
+    justify-content: center;
+  }
+}
